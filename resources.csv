@@ -1,0 +1,16 @@
+section,subsection,resource,description,link,link_origin
+Analysis tools,Data analysis,RAPIDS,The RAPIDS ecosystem provides comprehensive GPU-accelerated data analytics tooling.,https://rapids.ai/,added
+Analysis tools,Data analysis,cuDF,"Of particular interest are cuDF for accelerated Pandas-like data analysis, and cuGraph for network analysis.",https://docs.rapids.ai/api/cudf/stable/,added
+Analysis tools,Data analysis,cuGraph,"Of particular interest are cuDF for accelerated Pandas-like data analysis, and cuGraph for network analysis.",https://docs.rapids.ai/api/cugraph/stable/,added
+Analysis tools,Network analysis,graph-tool,"For graph analysis on the CPU, the graph-tool Python library is mature network science library implemented in C++ with Python bindings. It runs much faster than NetworkX and iGraph, especially when multithreaded. graph-tool provides graph visualisation via Cairo.",https://graph-tool.skewed.de/,added
+Analysis tools,Network analysis,iGraph,"For analysis on the CPU in Python, R, C, or Mathematica, iGraph is a slightly slower alternative to graph-tool. iGraph supports graph visualisation via inbuilt R functions or MatPlotLib.",https://igraph.org/,added
+Analysis tools,Network analysis,RAPIDS cuGraph as a NetworkX backend (nx-cugraph),"For large graphs, GPU acceleration is required, typically achieved by using RAPIDS cuGraph as a backend for NetworkX in Python. The maintainers provide a guide for integrating their libraries into visualisation workflows.",https://docs.rapids.ai/api/cugraph/stable/nx_cugraph/,added
+Inference,,Ray,Ray - see this report,,
+Modelling,Tools,Simulation frameworks (see the frameworks table),"We identify some frameworks which are used to simulate multi-agent systems at various scales. Small systems can run with naive execution and communication patterns on consumer hardware, while large applications require distributed computing and approximation methods to limit inference costs.",,
+Modelling,Further tools not listed,Large Agent Systems,"Plenty probably from market microstructure, systemic risk, sociology, etc.. Some related fields are listed at https://www.largeagentsystems.org and I discuss them in an upcoming blog.",https://www.largeagentsystems.org,document
+Interpretability,,Interpreting Agentic Systems: Beyond Model Explanations to System-Level Accountability,Vector Institute's recent paper Interpreting Agentic Systems: Beyond Model Explanations to System-Level Accountability,https://arxiv.org/abs/2601.17168,added
+Interpretability,,Anomaly detection,Anomaly detection,,
+Interpretability,,Carissa's paper,Carissa's paper,,
+Control,,Intelligent AI Delegation,"Tomasev's third paper, Intelligent AI Delegation, develops a framework for task delegation to improve reliability of cooperation in multi-agent systems.",https://arxiv.org/abs/2602.11865,added
+Other links,Evaluations,Survey of multi-agent LLM evaluations,Survey of multi-agent evals,https://www.lesswrong.com/posts/tGcLA596E8g3KnphE/survey-of-multi-agent-llm-evaluations,document
+Other links,Unsorted,arXiv 2608.04205,Relevent?,https://arxiv.org/abs/2608.04205,document

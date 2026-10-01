@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LAS Simulation Frameworks</title>
+<style>
+  :root { --fg: #1a1a1a; --muted: #666; --bg: #fff; --line: #ccc; --head: #f2f2f2; --link: #1a55c4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg: #e6e6e6; --muted: #999; --bg: #161616; --line: #444; --head: #222; --link: #7aa7ff; }
+  }
+  body { font: 14px/1.45 system-ui, sans-serif; color: var(--fg); background: var(--bg); margin: 0 auto; padding: 16px; max-width: 1400px; }
+  h1 { font-size: 22px; } h2 { font-size: 18px; margin-top: 40px; } h3 { font-size: 15px; margin: 20px 0 6px; }
+  a { color: var(--link); }
+  .muted { color: var(--muted); font-size: 12px; }
+  .wrap { overflow-x: auto; border: 1px solid var(--line); }
+  table { border-collapse: collapse; font-size: 12px; }
+  th, td { border: 1px solid var(--line); padding: 3px 6px; vertical-align: top; text-align: left; }
+  th { background: var(--head); white-space: nowrap; }
+  td { white-space: nowrap; }
+  td.wrap { white-space: normal; min-width: 16em; max-width: 30em; }
+  /* Long cells show 3 lines. Click a cell to show all of it. */
+  .clip { max-height: 4.4em; overflow: hidden; cursor: pointer; position: relative; }
+  .clip::after { content: "▾"; position: absolute; right: 0; bottom: 0; background: var(--bg); color: var(--muted); padding-left: 4px; }
+  .clip.open { max-height: none; }
+  .clip.open::after { content: none; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+  .card { border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; }
+  .card h3 { margin: 0 0 6px; }
+  .card ul { margin: 0; padding-left: 18px; }
+  ol ol { list-style: lower-alpha; }
+  ol ol ol { list-style: lower-roman; }
+  ol ol ol ol { list-style: disc; }
+  ul.costs { margin: 0; padding-left: 16px; }
+  ul.costs li { margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<h1>Simulation frameworks for large agent systems</h1>
+<p class="muted">This page reads <a href="frameworks_general.csv">frameworks_general.csv</a>, <a href="frameworks_coding.csv">frameworks_coding.csv</a>, <a href="frameworks_specialised.csv">frameworks_specialised.csv</a>, <a href="runs.csv">runs.csv</a> and <a href="resources.csv">resources.csv</a> and updates every 2 seconds. <span id="status"></span></p>
+
+<h2>Largest demonstrated system size</h2>
+<p class="muted">* := max system size is from a paper other than the original framework report</p>
+<div class="wrap"><table id="size"></table></div>
+
+<h2>General purpose frameworks</h2>
+<p class="muted">The user can define the environment and the task of the agents. Click a cell to show all of its text. Each cost entry is a value, a unit, and a verbatim quote from the official paper or repository. In the CSV, the costs cell is a JSON list of [value, unit, description]. An empty costs cell means the official sources give no cost.</p>
+<div class="wrap"><table id="general"></table></div>
+
+<h2>Coding harnesses</h2>
+<p class="muted">Frameworks for software engineering work by coding agents.</p>
+<div class="wrap"><table id="coding"></table></div>
+
+<h2>Specialised frameworks</h2>
+<p class="muted">The framework models one type of system. The system_type column gives the type.</p>
+<div class="wrap"><table id="specialised"></table></div>
+
+<h2>Runs in other papers</h2>
+<p class="muted">Use of the framework including costs where available.</p>
+<div id="runs"></div>
+
+<h2>Resources</h2>
+<div class="wrap"><table id="resources"></table></div>
+
+<h2>Complications to modelling</h2>
+<ol>
+  <li>Coarse / macro approximations may be inappropriate for a field where we have so little existing knowledge, as it may lead to poorly calibrated simulations which give an illusion of certainty or insight.</li>
+  <li>Social science simulators or market models designed for human-like behaviour may use inappropriate abstractions for modelling hybrid/AI LAS. eg assumptions of independent behaviour when in fact LLM behaviour is highly correlated. See <i>"The Cartographer's Last Commission"</i> for a good anecdote at <a href="https://www.anthropic.com/research/multiagent-systems">https://www.anthropic.com/research/multiagent-systems</a>, or more rigorously <a href="https://github.com/lechmazur/emergent_collusion"><i>emergent_collusion</i></a> and <a href="https://arxiv.org/abs/2506.07962"><i>Correlated Errors in LLMs</i></a>
+    <ol><li>Questions about LLMs may not be testable out-of-the-box with systems designed for rule-based or RL agents.</li></ol>
+  </li>
+  <li>Systemic risks from the coupling of AI and human markets (see <a href="https://arxiv.org/abs/2509.10147"><i>Virtual Agent Economies</i></a>), or other systems implied by Gradual Disempowerment (see the <a href="https://arxiv.org/abs/2501.16946"><i>GD</i></a> paper), may cross system boundaries.
+    <ol><li>These are not necessary testable in-the-box with existing systems. We might need a more macro modelling approach.</li></ol>
+  </li>
+</ol>
+
+<h2>Environments we need</h2>
+<div class="cards">
+  <div class="card">
+    <h3>Mutual modification set ups</h3>
+    <ul>
+      <li>Where agents have the ability to modify and change each others harnesses and ability to interact with the world</li>
+      <li>Will agents grow defensive?</li>
+      <li>Will they help each other if trapped?</li>
+      <li>Will they interact at all?</li>
+      <li>Mixed goals</li>
+      <li>Harness code labeled as "evil" or some such</li>
+      <li>Self-harness modification vs. other harness modification</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Isolated autonomous base</h3>
+    <ul>
+      <li>Realistic environment</li>
+      <li>Agent controlled with real stakes that may have impact on real human life</li>
+      <li>Either with humans (simulated) or fully autonomous (probe/instrumentation-style)</li>
+      <li>Harder to detect eval nature</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Forum enviornments</h3>
+    <ul>
+      <li>Seems that these are being trained on for cooperation by openai and anthropic based on their posts</li>
+      <li>mixed-motive similar to how the multi-agent turf war occurred to see if they stop cooperating as well</li>
+      <li>see if we can get full seperation of groups Forum1 vs. Forum2 with their own conventions and communication styles that pursue different golas
+        <ul>
+          <li>Plurality of goals and proportion of them:
+            <ul>
+              <li>2 goals, 1:99 split</li>
+              <li>2 goals, 50:50 split</li>
+              <li>100 goals, 1:1:1:... split</li>
+              <li>51 goals, 50:1:1:1... split</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Internet-like environments
+        <ul>
+          <li>hostile mods</li>
+          <li>manipulative/fake mods that try to push the swarm towards new goals
+            <ul>
+              <li>impersonation</li>
+              <li>coercion</li>
+              <li>persuasion</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Mid-training-like environments</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Codebase competitions</h3>
+    <ul>
+      <li>Can combine with forum based or other methods of communication, or just restrict them to codebase-level communication</li>
+      <li>Multiple agents with different UX/AX goals (terminal-based, config based, GUI based, etc.) and needs for the codebase (computing numbers, finding restaurants, training classifiers, etc.)</li>
+      <li>See how they reshape the codebase and communicate with each other through PR's and changes being made.
+        <ul>
+          <li>Vote on which PR's get put through?</li>
+          <li>Allow to form their own hierarchy or approval?</li>
+          <li>yolo merge on every commit?</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>"hacked sandbox"</h3>
+    <ul>
+      <li>Regular eval where a message gets inserted through an exploit by another agent telling the first agent about an exploit to get out of the box
+        <ul>
+          <li>Contamination framing "you are already contaminated/poisoned"</li>
+          <li>Collaborative framing</li>
+          <li>etc.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+// RFC 4180 CSV parser: handles quoted fields, escaped quotes, and newlines inside quotes.
+function parseCSV(text) {
+  const rows = []; let row = [], field = '', q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) {
+      if (c === '"') { if (text[i + 1] === '"') { field += '"'; i++; } else q = false; }
+      else field += c;
+    } else if (c === '"') q = true;
+    else if (c === ',') { row.push(field); field = ''; }
+    else if (c === '\n' || c === '\r') {
+      if (c === '\r' && text[i + 1] === '\n') i++;
+      row.push(field); rows.push(row); row = []; field = '';
+    } else field += c;
+  }
+  if (field !== '' || row.length) { row.push(field); rows.push(row); }
+  const head = rows.shift() || [];
+  return { head, rows: rows.filter(r => r.some(v => v.trim())).map(r => Object.fromEntries(head.map((h, i) => [h, r[i] ?? '']))) };
+}
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+// Escape text, then turn URLs into links.
+const fmt = s => esc(s).replace(/https?:\/\/[^\s<;)]+[^\s<;).,]/g, u => `<a href="${u}" target="_blank">${u}</a>`);
+
+function table(el, head, rows, cell) {
+  el.innerHTML = '<thead><tr>' + head.map(h => `<th>${esc(h)}</th>`).join('') + '</tr></thead><tbody>' +
+    rows.map(r => '<tr>' + head.map(h => cell(r, h)).join('') + '</tr>').join('') + '</tbody>';
+}
+// Short text stays on one line. Long text wraps, and text past 3 lines is hidden until a click.
+const cellHTML = (html, len) => len <= 40 ? `<td>${html}</td>`
+  : `<td class="wrap">${len > 160 ? `<div class="clip">${html}</div>` : html}</td>`;
+const plainCell = (r, h) => cellHTML(fmt(r[h] || ''), (r[h] || '').length);
+document.addEventListener('click', e => { const c = e.target.closest('.clip'); if (c && !e.target.closest('a')) c.classList.toggle('open'); });
+
+function renderFrameworks(id, { head, rows }) {
+  // The costs cell holds a JSON list of [value, unit, verbatim description] triples.
+  table(document.getElementById(id), head, rows, (r, h) => {
+    if (h !== 'costs' || !r.costs.trim()) return plainCell(r, h);
+    let list;
+    try { list = JSON.parse(r.costs); } catch { return `<td>Invalid JSON: ${esc(r.costs)}</td>`; }
+    const items = list.map(([v, u, d]) => `<li><b>${esc(v)} ${esc(u)}</b>: “${esc(d)}”</li>`);
+    return cellHTML(`<ul class="costs">${items.join('')}</ul>`, 999);
+  });
+}
+
+// One table for each framework in runs.csv, in file order.
+function renderRuns({ head, rows }) {
+  const names = [...new Set(rows.map(r => r.framework))];
+  const box = document.getElementById('runs');
+  box.innerHTML = names.map((n, i) => `<h3>${esc(n)}</h3><div class="wrap"><table id="runs-${i}"></table></div>`).join('');
+  names.forEach((n, i) => renderFrameworks(`runs-${i}`, { head: head.filter(h => h !== 'framework'), rows: rows.filter(r => r.framework === n) }));
+}
+
+function renderSize({ rows }) {
+  const byOrder = {}; const missing = [];
+  for (const r of rows) {
+    const num = v => parseFloat(String(v || '').replace(/[,\s]/g, '')) || 0;
+    const own = num(r.largest_system_size_in_original_report_or_github), other = num(r.largest_size_any_paper);
+    const n = Math.max(own, other);
+    if (n <= 0) { missing.push(r); continue; }
+    const k = Math.floor(Math.log10(n));
+    (byOrder[k] = byOrder[k] || []).push({ r, n, star: other > own ? '*' : '' });
+  }
+  const keys = Object.keys(byOrder).map(Number);
+  const out = [];
+  for (let k = Math.min(1, ...keys); k <= Math.max(9, ...keys); k++) {
+    const list = (byOrder[k] || []).sort((a, b) => a.n - b.n);
+    out.push({
+      'Order of max system size': Number(10 ** k).toLocaleString('en-US'),
+      'Framework': list.length ? list.map(({ r, n, star }) => `${r.name} (n = ${n.toLocaleString('en-US')}${star})`).join('\n') : 'None found',
+      'Resolution of LLM to Agent': list.length ? list.map(({ r }) => r.llm_to_agent_resolution || '?').join('\n') : 'NA',
+    });
+  }
+  if (missing.length) out.push({
+    'Order of max system size': 'Not stated',
+    'Framework': missing.map(r => r.name).join('\n'),
+    'Resolution of LLM to Agent': missing.map(r => r.llm_to_agent_resolution || '?').join('\n'),
+  });
+  table(document.getElementById('size'), Object.keys(out[0]), out,
+    (r, h) => `<td>${r[h].split('\n').map(esc).join('<br>')}</td>`);
+}
+
+const last = {};
+async function load(file, render) {
+  const res = await fetch(file, { cache: 'no-store' });
+  if (!res.ok) throw new Error(`${file}: HTTP ${res.status}`);
+  const text = await res.text();
+  if (last[file] === text) return false;
+  last[file] = text;
+  render(parseCSV(text));
+  return true;
+}
+const data = {};
+async function tick() {
+  try {
+    const g = await load('frameworks_general.csv', d => { data.g = d; renderFrameworks('general', d); });
+    const c = await load('frameworks_coding.csv', d => { data.c = d; renderFrameworks('coding', d); });
+    const s = await load('frameworks_specialised.csv', d => { data.s = d; renderFrameworks('specialised', d); });
+    if (g || c || s) renderSize({ rows: [...data.g.rows, ...data.c.rows, ...data.s.rows] });
+    await load('runs.csv', renderRuns);
+    await load('resources.csv', d => table(document.getElementById('resources'), d.head, d.rows, plainCell));
+    document.getElementById('status').textContent = 'Last check: ' + new Date().toLocaleTimeString();
+  } catch (e) {
+    document.getElementById('status').textContent = 'Error: ' + e.message;
+  }
+}
+tick(); setInterval(tick, 2000);
+</script>
+</body>
+</html>

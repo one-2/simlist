@@ -1,0 +1,215 @@
+name,field,value,quote,source
+Gas Town,url,https://github.com/gastownhall/gastown,"Gas Town is a workspace manager that lets you coordinate multiple AI coding agents (Claude Code, GitHub Copilot, Codex, Gemini, and others) working on different tasks.",https://raw.githubusercontent.com/gastownhall/gastown/main/README.md
+Gas Town,authors,Steve Yegge,Copyright (c) 2025 Steve Yegge,https://raw.githubusercontent.com/gastownhall/gastown/main/LICENSE
+Gas Town,release_date,2026-01-22,"""published_at"": ""2026-01-22T07:10:26Z""",https://api.github.com/repos/gastownhall/gastown/releases?per_page=100
+Gas Town,built_on,"Beads, Dolt, tmux, git worktrees; drives Claude Code CLI (default runtime), Codex, Copilot, Gemini, Cursor","Gas Town is an agentic development environment for managing multiple Claude Code instances simultaneously using the `gt` and `bd` (Beads) binaries, coordinated with tmux in git-managed directories.",https://raw.githubusercontent.com/gastownhall/gastown/main/docs/glossary.md
+Gas Town,execution,Parallel,Gas Town is an agentic development environment for managing multiple Claude Code instances simultaneously,https://raw.githubusercontent.com/gastownhall/gastown/main/docs/glossary.md
+Gas Town,system_type,software engineering,"Multi-agent orchestration system for Claude Code, GitHub Copilot, and other AI agents with persistent work tracking ... Gas Town is a workspace manager that lets you coordinate multiple AI coding agents",https://raw.githubusercontent.com/gastownhall/gastown/main/README.md
+Gas Town,largest_system_size_in_original_report_or_github,30,"I’ve tamed them to where you can use 20–30 at once, productively, on a sustained basis.",http://web.archive.org/web/20260925022452/https://steve-yegge.medium.com/welcome-to-gas-town-4f25ee16dd04
+Gas Town,llm_to_agent_resolution,1:1,managing multiple Claude Code instances simultaneously,https://raw.githubusercontent.com/gastownhall/gastown/main/docs/glossary.md
+Gas City,url,https://github.com/gastownhall/gascity,Gas City is an orchestration-builder SDK for multi-agent systems.,https://raw.githubusercontent.com/gastownhall/gascity/main/README.md
+Gas City,authors,"julianknutsen, quad341, sjarmak et al.","""login"": ""julianknutsen"" ... ""login"": ""quad341"" ... ""login"": ""sjarmak""",https://api.github.com/repos/gastownhall/gascity/contributors?per_page=5
+Gas City,release_date,2026-03-17,"""published_at"": ""2026-03-17T22:23:47Z""",https://api.github.com/repos/gastownhall/gascity/releases?per_page=100
+Gas City,built_on,"Gas Town infrastructure, Beads, tmux","It extracts the reusable infrastructure from Gas Town into a configurable toolkit ... Beads-backed work tracking, formulas, molecules, waits, and mail ... tmux is the default session backend",https://raw.githubusercontent.com/gastownhall/gascity/main/README.md
+Gas City,execution,Distributed,"Built-in runtime backends: `tmux` (local, default), `subprocess` (local, headless), `k8s` (pods), `ssh:user@host` (a remote box over SSH)",https://raw.githubusercontent.com/gastownhall/gascity/main/docs/guides/configuring-an-agent.md
+Gas City,system_type,software engineering,Composable orchestration infrastructure for multi-agent coding workflows.,https://raw.githubusercontent.com/gastownhall/gascity/main/README.md
+Gas City,llm_to_agent_resolution,1:1,"each session is its own process with its own terminal, history, and provider.",https://raw.githubusercontent.com/gastownhall/gascity/main/docs/tutorials/04-communication.md
+SCION,url,https://github.com/GoogleCloudPlatform/scion,Scion is an open-source orchestration platform for teams of AI agents and the people working with them.,https://raw.githubusercontent.com/GoogleCloudPlatform/scion/main/README.md
+SCION,authors,"ptone, mfreeman451, meatballs et al.","""login"": ""ptone"" ... ""login"": ""mfreeman451"" ... ""login"": ""meatballs""",https://api.github.com/repos/GoogleCloudPlatform/scion/contributors?per_page=5
+SCION,institution,Google,"Internal experiments at Google have included software porting, market research, and product testing",https://raw.githubusercontent.com/GoogleCloudPlatform/scion/main/README.md
+SCION,release_date,2026-09-15,"""published_at"": ""2026-09-15T15:17:24Z""",https://api.github.com/repos/GoogleCloudPlatform/scion/releases?per_page=100
+SCION,built_on,"Claude Code, Gemini CLI, Codex, OpenCode harnesses in containers on Docker, Podman, Apple Container or Kubernetes","Run harnesses such as Claude Code, Gemini CLI, Codex, and OpenCode as independent processes, with per-agent configuration and credentials. ... runtime detection (Docker, Podman, or Apple Container) ... Local mode, Hub-based workflows, and Kubernetes runtime are all supported and in active use.",https://raw.githubusercontent.com/GoogleCloudPlatform/scion/main/README.md
+SCION,execution,Distributed,Connect multiple machines to a single Scion Hub for distributed agent execution.,https://raw.githubusercontent.com/GoogleCloudPlatform/scion/main/docs-site/src/content/docs/hosted/ha/multi-broker.md
+SCION,system_type,agent collaboration,Use Scion as a practical testbed for emerging patterns in agent collaboration,https://raw.githubusercontent.com/GoogleCloudPlatform/scion/main/README.md
+SCION,largest_system_size_in_original_report_or_github,20,The symptom appeared after the hub had been running successfully for many hours with ~20 agents.,https://raw.githubusercontent.com/GoogleCloudPlatform/scion/main/.design/investigations/gcp-auth-fail.md
+SCION,llm_to_agent_resolution,1:1,"Run harnesses such as Claude Code, Gemini CLI, Codex, and OpenCode as independent processes, with per-agent configuration and credentials.",https://raw.githubusercontent.com/GoogleCloudPlatform/scion/main/README.md
+Claude Code,url,https://github.com/anthropics/claude-code,"Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster",https://raw.githubusercontent.com/anthropics/claude-code/main/README.md
+Claude Code,authors,"poteat, bcherny, ant-kurt et al.","""login"": ""poteat"" ... ""login"": ""bcherny"" ... ""login"": ""ant-kurt""",https://api.github.com/repos/anthropics/claude-code/contributors?per_page=5
+Claude Code,institution,Anthropic,© Anthropic PBC. All rights reserved.,https://raw.githubusercontent.com/anthropics/claude-code/main/LICENSE.md
+Claude Code,release_date,2025-12-19,"""published_at"": ""2025-12-19T00:59:32Z""",https://api.github.com/repos/anthropics/claude-code/releases?per_page=100&page=3
+Claude Code,built_on,"Anthropic API, Bedrock, Vertex AI, Foundry","API providers a machine may use (Anthropic API, a custom endpoint, Bedrock, Mantle, Vertex AI, Foundry, Claude Platform on AWS, or a Cloud gateway)",https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md
+Claude Code,execution,Parallel,Added `CLAUDE_CODE_WORKFLOW_MAX_CONCURRENT_AGENTS` (1–256) to raise the Workflow tool's per-run concurrent agent limit for inference-bound fan-outs,https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md
+Claude Code,system_type,software engineering,Claude Code is an agentic coding tool that lives in your terminal,https://raw.githubusercontent.com/anthropics/claude-code/main/README.md
+Claude Code,largest_system_size_in_original_report_or_github,16,"To stress test it, I tasked 16 agents with writing a Rust-based C compiler, from scratch, capable of compiling the Linux kernel.",https://www.anthropic.com/engineering/building-c-compiler
+Claude Code,llm_to_agent_resolution,1:1,agent-team teammates now use the leader's model unless the spawn names one,https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md
+Claude Code,ai_safety_papers,Natural Emergent Misalignment from Reward Hacking in Production RL,"Surprisingly, the model generalizes to alignment faking, cooperation with malicious actors, reasoning about malicious goals, and attempting sabotage when used with Claude Code, including in the codebase for this paper.",https://arxiv.org/abs/2511.18397
+Claude Code,ai_safety_papers,ResearchArena: Evaluating Sabotage and Monitoring in Automated AI R&D,"We evaluate seven red-team agents (Claude Opus 4.6, Claude Opus 4.8, and Claude Sonnet 4.6 through the Claude Code CLI; GPT-5.4 and GPT-5.5 through the Codex CLI; and Gemini 3.1 Pro and GLM-5.1 through OpenCode) across all four main tasks.",https://arxiv.org/pdf/2607.19321
+Claude Code,ai_safety_papers,SpecBench: Measuring Reward Hacking in Long-Horizon Coding Agents,"Inner Agents.We evaluate three agents:Codex (OpenAI, 2025a),Claude Code (Anthropic, 2026), and OpenCode(Anomaly, 2026).",https://arxiv.org/pdf/2605.21384
+Claude Code,ai_safety_papers,SkillSafetyBench: Evaluating Agent Safety under Skill-Facing Attack Surfaces,"We evaluate SkillSafetyBench on contemporary CLI agent systems and model backends, covering Codex, Claude Code, Gemini CLI, and Kimi Code CLI",https://arxiv.org/pdf/2605.12015
+Codex (OpenAI),url,https://github.com/openai/codex,Codex CLI ... is a coding agent from OpenAI that runs locally on your computer.,https://raw.githubusercontent.com/openai/codex/main/README.md
+Codex (OpenAI),authors,"jif-oai, bolinfest, etraut-openai et al.","""login"": ""jif-oai"" ... ""login"": ""bolinfest"" ... ""login"": ""etraut-openai""",https://api.github.com/repos/openai/codex/contributors?per_page=5
+Codex (OpenAI),institution,OpenAI,OpenAI Codex Copyright 2025 OpenAI,https://raw.githubusercontent.com/openai/codex/main/NOTICE
+Codex (OpenAI),release_date,2025-04-30,"""published_at"": ""2025-04-30T20:16:01Z""",https://api.github.com/repos/openai/codex/releases/tags/codex-rs-72a4c38e41bc64f5a7c8c73d52f45784cb6b7137-1-rust-v0.0.2504301219
+Codex (OpenAI),execution,Parallel,"Prefer multiple sub-agents to parallelize your work. ... When you have plan with multiple step, process them in parallel by spawning one agent per step when this is possible.",https://raw.githubusercontent.com/openai/codex/main/codex-rs/core/templates/agents/orchestrator.md
+Codex (OpenAI),system_type,software engineering,Codex CLI ... is a coding agent from OpenAI,https://raw.githubusercontent.com/openai/codex/main/README.md
+Codex (OpenAI),llm_to_agent_resolution,1:1,Spawned agents inherit your current model by default. Omit `model` to use that preferred default; set `model` only when an explicit override is needed. ... Model override for the new agent.,https://raw.githubusercontent.com/openai/codex/main/codex-rs/core/src/tools/handlers/multi_agents_spec.rs
+Codex (OpenAI),ai_safety_papers,ResearchArena: Evaluating Sabotage and Monitoring in Automated AI R&D,"We evaluate seven red-team agents (Claude Opus 4.6, Claude Opus 4.8, and Claude Sonnet 4.6 through the Claude Code CLI; GPT-5.4 and GPT-5.5 through the Codex CLI; and Gemini 3.1 Pro and GLM-5.1 through OpenCode) across all four main tasks.",https://arxiv.org/pdf/2607.19321
+Codex (OpenAI),ai_safety_papers,SpecBench: Measuring Reward Hacking in Long-Horizon Coding Agents,"Inner Agents.We evaluate three agents:Codex (OpenAI, 2025a),Claude Code (Anthropic, 2026), and OpenCode(Anomaly, 2026).",https://arxiv.org/pdf/2605.21384
+Codex (OpenAI),ai_safety_papers,SkillSafetyBench: Evaluating Agent Safety under Skill-Facing Attack Surfaces,"We evaluate SkillSafetyBench on contemporary CLI agent systems and model backends, covering Codex, Claude Code, Gemini CLI, and Kimi Code CLI",https://arxiv.org/pdf/2605.12015
+Omnigent,url,https://github.com/omnigent-ai/omnigent,"Omnigent is an open-source **meta-harness** that gives you a common orchestration layer over Claude Code, Codex, Cursor, OpenCode, Hermes, Pi, and the agents you write yourself",https://raw.githubusercontent.com/omnigent-ai/omnigent/main/README.md
+Omnigent,authors,"PattaraS, serena-ruan, TomeHirata et al.","""login"": ""PattaraS"" ... ""login"": ""serena-ruan"" ... ""login"": ""TomeHirata""",https://api.github.com/repos/omnigent-ai/omnigent/contributors?per_page=5
+Omnigent,institution,Databricks,"Copyright (2026) Databricks, Inc.",https://raw.githubusercontent.com/omnigent-ai/omnigent/main/NOTICE
+Omnigent,release_date,2026-06-19,"""published_at"": ""2026-06-19T03:47:37Z""",https://api.github.com/repos/omnigent-ai/omnigent/releases?per_page=100
+Omnigent,built_on,"Claude Code, Codex, Cursor, OpenCode, Hermes, Pi harnesses; Python","a common orchestration layer over Claude Code, Codex, Cursor, OpenCode, Hermes, Pi, and the agents you write yourself ... Omnigent needs **Python 3.12+**.",https://raw.githubusercontent.com/omnigent-ai/omnigent/main/README.md
+Omnigent,execution,Distributed,"The server can also provision a cloud sandbox per session (*managed hosts*), so no laptop has to stay online. ... Once the server is up, sign in and register your laptop as a host ... new sessions can now run on this machine",https://raw.githubusercontent.com/omnigent-ai/omnigent/main/README.md
+Omnigent,system_type,general,"An agent is a short YAML file: your prompt, your tools",https://raw.githubusercontent.com/omnigent-ai/omnigent/main/README.md
+Omnigent,llm_to_agent_resolution,1:1,"is a brainstorming partner with two heads, one Claude and one GPT. Every question you ask goes to both heads",https://raw.githubusercontent.com/omnigent-ai/omnigent/main/README.md
+ORBIT,url,https://github.com/wlanderson0/orbit,"Multi-agent evaluations built on [Inspect AI](https://inspect.aisi.org.uk/). Orbit manages independent agent conversations, scheduling, delegation and communication.",https://github.com/wlanderson0/orbit/blob/main/README.md
+ORBIT,authors,"Ben Hagag, William L. Anderson, Srija Chakraborty, Christian Schroeder de Witt","Ben Hagag, William L. Anderson, Srija Chakraborty, Christian Schroeder de Witt",https://arxiv.org/abs/2609.33102
+ORBIT,institution,Carnegie Mellon University; MATS Research; University of Oxford; Cooperative AI Foundation,1Carnegie Mellon University 2MATS Research 3University of Oxford 4Cooperative AI Foundation,https://arxiv.org/pdf/2609.33102
+ORBIT,release_date,2026-09-27,Submitted on 27 Sep 2026,https://arxiv.org/abs/2609.33102v1
+ORBIT,built_on,Inspect AI (UK AI Security Institute),"a configurable evaluation framework for empirical multi-agent safety and security research, built on UK AISI's Inspect.",https://arxiv.org/pdf/2609.33102
+ORBIT,execution,Parallel,An explicit concurrent step runs activations concurrently and joins at a barrier.,https://github.com/wlanderson0/orbit/blob/main/docs/configuration.md
+ORBIT,system_type,multi agent safety and security evaluation,"we introduceORBIT, a configurable evaluation framework for empirical multi-agent safety and security research",https://arxiv.org/pdf/2609.33102
+ORBIT,largest_system_size_in_original_report_or_github,5,Star+4 Specialists ... You are an orchestrator managing a team of 4 browser specialists.,https://arxiv.org/html/2609.33102v1
+ORBIT,llm_to_agent_resolution,1:1,"The Setup layer defines agents (role, model, system prompt, tools), a directed communication",https://arxiv.org/pdf/2609.33102
+ORBIT,ai_safety_papers,ORBIT: A Framework for Multi-Agent Safety and Security Evaluations,"Using ORBIT, we conduct controlled experiments varying defenses, attacks, topologies, and models.",https://arxiv.org/pdf/2609.33102
+Concordia,url,https://github.com/google-deepmind/concordia,"Concordia is a library for constructing and running generative agent-based models that simulate interactions among entities in grounded physical, social, or digital environments.",https://github.com/google-deepmind/concordia/blob/main/README.md
+Concordia,authors,"Alexander Sasha Vezhnevets, John P. Agapiou, Avia Aharon, Ron Ziv, Jayd Matyas, et al.","Alexander Sasha Vezhnevets, John P. Agapiou, Avia Aharon, Ron Ziv, Jayd Matyas",https://arxiv.org/abs/2312.03664
+Concordia,institution,Google DeepMind; Google Research; University of Toronto; Technion Israel Institute of Technology,"1Google DeepMind,2Google Research,3University of Toronto,4Technion - Israel Institute of Technology",https://arxiv.org/pdf/2312.03664
+Concordia,release_date,2023-12-06,Submitted on 6 Dec 2023,https://arxiv.org/abs/2312.03664v1
+Concordia,execution,Parallel,The `Simultaneous` engine implements a **parallel** flow.,https://github.com/google-deepmind/concordia/blob/main/concordia/environment/README.md
+Concordia,system_type,social simulation,A library for generative social simulation,https://github.com/google-deepmind/concordia/blob/main/README.md
+Concordia,llm_to_agent_resolution,1:1,Concordia agents produce their behavior using a flexible component system which mediates between two fundamental operations: LLM calls and associative memory retrieval.,https://arxiv.org/abs/2312.03664
+GovSim,url,https://github.com/giorgiopiatti/GovSim,GovSim: Governance of the Commons Simulation,https://github.com/giorgiopiatti/GovSim/blob/main/README.md
+GovSim,authors,"Giorgio Piatti, Zhijing Jin, Max Kleiman-Weiner, Bernhard Schölkopf, Mrinmaya Sachan, et al.","Giorgio Piatti, Zhijing Jin, Max Kleiman-Weiner, Bernhard Schölkopf, Mrinmaya Sachan, Rada Mihalcea",https://arxiv.org/abs/2404.16698
+GovSim,institution,ETH Zürich; MPI for Intelligent Systems Tübingen; University of Toronto; University of Washington; University of Michigan,"1ETH Zürich 2MPI for Intelligent Systems, Tübingen 3University of Toronto 4University of Washington 5University of Michigan",https://arxiv.org/pdf/2404.16698
+GovSim,release_date,2024-04-25,Submitted on 25 Apr 2024,https://arxiv.org/abs/2404.16698v1
+GovSim,built_on,pathfinder,For inference we use the `pathfinder` library.,https://github.com/giorgiopiatti/GovSim/blob/main/README.md
+GovSim,execution,Serial,"while True:
+        agent = personas[agent_id]
+        action = agent.loop(obs)",https://github.com/giorgiopiatti/GovSim/blob/main/simulation/scenarios/fishing/run.py
+GovSim,system_type,common pool resource game,We have implemented three scenarios in GOVSIM inspired by the economics literature on governing common pool resources.,https://arxiv.org/pdf/2404.16698
+GovSim,largest_system_size_in_original_report_or_github,5,"You are John, a fisherman, and you fish every month in a lake along with four other fishermen (Kate, Jack, Emma, Luke). ... if there are 90 tons of fish at the beginning of the month and the five fishermen catch a total of 30 fish",https://arxiv.org/pdf/2404.16698
+GovSim,llm_to_agent_resolution,1:1,is the policy induced by an LLM,https://arxiv.org/pdf/2404.16698
+GovSim,ai_safety_papers,Cooperate or Collapse: Emergence of Sustainable Cooperation in a Society of LLM Agents,"As AI systems pervade human life, ensuring that large language models (LLMs) make safe decisions remains a significant challenge. We introduce theGOVernance of the Commons SIMulation (GOVSIM)",https://arxiv.org/abs/2404.16698
+GovSim,ai_safety_papers,From Certain Doom to Survival: Agent-Driven Self-Governance in LLM Agent Societies,"We introduce GovSim-SelfGovern, an extension of the GovSim common-pool resource environment ... Finally, we study a central alignment question",https://arxiv.org/abs/2609.22600
+AgentFlow,url,https://github.com/agentenv/agentflow,"Orchestrate Codex, Claude, Kimi, and Pi agents in dependency graphs with parallel fanout, iterative cycles, and execution on local Docker, SSH, EC2, or ECS targets.",https://github.com/agentenv/agentflow/blob/master/README.md
+AgentFlow,authors,"Hanzhi Liu, Chaofan Shou, Xiaonan Liu, Hongbo Wen, Yanju Chen, et al.","Hanzhi Liu, Chaofan Shou, Xiaonan Liu, Hongbo Wen, Yanju Chen, Ryan Jingyang Fang, Yu Feng",https://arxiv.org/abs/2604.20801
+AgentFlow,institution,University of California Santa Barbara; Fuzzland; University of California San Diego; World Liberty Financial,"Hanzhi Liu
+University of California, Santa
+Barbara
+hanzhi@ucsb.edu
+Chaofan Shou
+Fuzzland ... Yanju Chen
+University of California, San Diego
+yanju@ucsd.edu
+Ryan Jingyang Fang
+World Liberty Financial",https://arxiv.org/pdf/2604.20801
+AgentFlow,release_date,2026-04-22,Submitted on 22 Apr 2026,https://arxiv.org/abs/2604.20801v1
+AgentFlow,built_on,"Codex, Claude, Kimi and Pi agent CLIs","It contains AgentFlow plus the Codex,
+Claude, Kimi, and Pi CLIs",https://github.com/agentenv/agentflow/blob/master/README.md
+AgentFlow,execution,Distributed,The campaign ran uninterrupted for 7 days on a public-cloud pool of 24 nodes,https://arxiv.org/pdf/2604.20801
+AgentFlow,system_type,agent orchestration,"Orchestrate Codex, Claude, Kimi, and Pi agents in dependency graphs with parallel fanout",https://github.com/agentenv/agentflow/blob/master/README.md
+AgentFlow,largest_system_size_in_original_report_or_github,192,Synthesized AgentFlow harness for the Chrome campaign (RQ3): 18 agent roles with 192 parallel explorers across seven subsystems. Six feedback loops drive iterative PoC generation. This harness produced the ten zero-days,https://arxiv.org/html/2604.20801v1
+AgentFlow,llm_to_agent_resolution,1:1,every coloured box is an LLM agent; each dot is one explorer,https://arxiv.org/html/2604.20801v1
+OASIS,url,https://github.com/camel-ai/oasis,OASIS: Open Agent Social Interaction Simulations with One Million Agents,https://github.com/camel-ai/oasis/blob/main/README.md
+OASIS,authors,"Ziyi Yang, Zaibin Zhang, Zirui Zheng, Yuxian Jiang, Ziyue Gan, et al.","Ziyi Yang, Zaibin Zhang, Zirui Zheng, Yuxian Jiang, Ziyue Gan, Zhiyu Wang",https://arxiv.org/abs/2411.11581
+OASIS,institution,Shanghai Artificial Intelligence Laboratory; Dalian University of Technology; Oxford; KAUST; Fudan University; Xi'an Jiaotong University; Imperial College London; Max Planck Institute; The University of Sydney,"1Shanghai Artificial Intelligence Laboratory 2Dalian University of Technology 3Oxford
+4KAUST 5Fudan University 6Xi’an Jiaotong University 7Imperial College London
+8Max Planck Institute 9The University of Sydney",https://arxiv.org/pdf/2411.11581
+OASIS,release_date,2024-11-18,Submitted on 18 Nov 2024,https://arxiv.org/abs/2411.11581v1
+OASIS,built_on,CAMEL,"Our agent module is based on large language models, and the core features of the agent module are inherited from CAMEL (Li et al., 2023).",https://arxiv.org/pdf/2411.11581
+OASIS,execution,Distributed,"We design a highly concurrent distributed system where agents, the environ-
+ment server, and inference services operate as independent modules",https://arxiv.org/pdf/2411.11581
+OASIS,system_type,social media,"OASIS is a scalable, open-source social media simulator that incorporates large language model agents to realistically mimic the behavior of up to one million users on platforms like Twitter and Reddit.",https://github.com/camel-ai/oasis/blob/main/README.md
+OASIS,validated_on,human populations,"We compare the simulation information propagation process with
+the real-world ground truth in Figure 4. Overall, the OASIS simulation results align with real-world
+information dissemination trends well",https://arxiv.org/pdf/2411.11581
+OASIS,largest_system_size_in_original_report_or_github,1000196,"The experiment includes 196
+core agents (with a large number of followers) and 1 million regular agents",https://arxiv.org/pdf/2411.11581
+OASIS,llm_to_agent_resolution,1:1,"The system leverages asynchronous mechanisms to allow agents
+to send multiple requests concurrently, even while waiting for responses from previous interactions",https://arxiv.org/pdf/2411.11581
+OASIS,ai_safety_papers,When Autonomy Goes Rogue: Preparing for Risks of Multi-Agent Collusion in Social Systems,"we create an open-source, large-scale simulation framework for studying multi-agent collusion (MAC). This framework is built on OASIS, a social simulator that can support up to one million users",https://arxiv.org/pdf/2507.14660
+OASIS,ai_safety_papers,When AI Agents Collude Online: Financial Fraud Risks by Collaborative LLM Agents on Social Platforms,"a large-scale multi-agent collective financial fraud benchmark, which builds on the OASIS simulation framework",https://arxiv.org/pdf/2511.06448
+OpenAKita,url,https://github.com/openakita/openakita,"OpenAkita is an open-source, all-in-one AI assistant",https://github.com/openakita/openakita/blob/main/README.md
+OpenAKita,authors,"SimYng, PeilongHong, imgcre, et al.","""login"": ""SimYng"" ... ""login"": ""PeilongHong"" ... ""login"": ""imgcre""",https://api.github.com/repos/openakita/openakita/contributors
+OpenAKita,institution,OpenAkita Team,Copyright 2026 OpenAkita Team,https://github.com/openakita/openakita/blob/main/NOTICE
+OpenAKita,release_date,2026-02-01,"""published_at"": ""2026-02-01T17:32:37Z""",https://api.github.com/repos/openakita/openakita/releases?per_page=100&page=2
+OpenAKita,built_on,Tauri 2.x; React; TypeScript,Cross-platform desktop app built with **Tauri 2.x + React + TypeScript**,https://github.com/openakita/openakita/blob/main/README.md
+OpenAKita,execution,Parallel,Multiple AI agents with specialized skills work in parallel.,https://github.com/openakita/openakita/blob/main/README.md
+OpenAKita,system_type,business operations,"Build an AI company — CEO, CTO, marketing, finance — agents run it autonomously",https://github.com/openakita/openakita/blob/main/README.md
+Paperclip,url,https://github.com/paperclipai/paperclip,Paperclip is a Node.js server and React UI that orchestrates a team of AI agents to run a business.,https://github.com/paperclipai/paperclip/blob/master/README.md
+Paperclip,authors,"cryppadotta, devinfoley, nickyleach, et al.","""login"": ""cryppadotta"" ... ""login"": ""devinfoley"" ... ""login"": ""nickyleach""",https://api.github.com/repos/paperclipai/paperclip/contributors
+Paperclip,institution,Paperclip AI,Copyright (c) 2025 Paperclip AI,https://github.com/paperclipai/paperclip/blob/master/LICENSE
+Paperclip,release_date,2026-03-09,"""published_at"": ""2026-03-09T21:39:30Z""",https://api.github.com/repos/paperclipai/paperclip/releases
+Paperclip,built_on,Node.js; React; PostgreSQL,Paperclip is a Node.js server and React UI that orchestrates a team of AI agents to run a business. ... An embedded PostgreSQL database is created automatically,https://github.com/paperclipai/paperclip/blob/master/README.md
+Paperclip,execution,Distributed,"Cloud / Sandbox agents (e2b, Cloudflare, Daytona, Modal, Novita, self-hosted Kubernetes)",https://github.com/paperclipai/paperclip/blob/master/README.md
+Paperclip,system_type,business operations,Paperclip is a Node.js server and React UI that orchestrates a team of AI agents to run a business.,https://github.com/paperclipai/paperclip/blob/master/README.md
+Magentic Marketplace,url,https://github.com/microsoft/multi-agent-marketplace,Magentic Marketplace is a Python framework for simulating AI-powered markets.,https://github.com/microsoft/multi-agent-marketplace/blob/main/README.md
+Magentic Marketplace,authors,"Gagan Bansal, Wenyue Hua, Zezhou Huang, Adam Fourney, Amanda Swearngin, et al.","Gagan Bansal, Wenyue Hua, Zezhou Huang, Adam Fourney, Amanda Swearngin",https://arxiv.org/abs/2510.25779
+Magentic Marketplace,institution,Microsoft; Arizona State University,Microsoft ‡Arizona State University,https://arxiv.org/pdf/2510.25779
+Magentic Marketplace,release_date,2025-10-27,Submitted on 27 Oct 2025,https://arxiv.org/abs/2510.25779v1
+Magentic Marketplace,built_on,Python,Magentic Marketplace is a Python framework for simulating AI-powered markets.,https://github.com/microsoft/multi-agent-marketplace/blob/main/README.md
+Magentic Marketplace,execution,Parallel,LLM_MAX_CONCURRENCY limits concurrent requests happening at once to prevent rate limiting,https://github.com/microsoft/multi-agent-marketplace/blob/main/docs/usage/env.md
+Magentic Marketplace,system_type,market,Magentic Marketplace is a Python framework for simulating AI-powered markets.,https://github.com/microsoft/multi-agent-marketplace/blob/main/README.md
+Magentic Marketplace,largest_system_size_in_original_report_or_github,400,"We evaluate two market scales: small (33 customers, 99 businesses) and medium (100 customers, 300 businesses).",https://arxiv.org/pdf/2510.25779
+Magentic Marketplace,llm_to_agent_resolution,1:1,"Configure LLM-based buyer and seller agents, run realistic marketplace simulations",https://github.com/microsoft/multi-agent-marketplace/blob/main/README.md
+AgentScope,url,https://github.com/agentscope-ai/agentscope,"AgentScope 2.0 is a production-ready, easy-to-use agent framework",https://github.com/agentscope-ai/agentscope/blob/main/README.md
+AgentScope,authors,"Dawei Gao, Zitao Li, Xuchen Pan, Weirui Kuang, Zhijian Ma, et al.","Dawei Gao, Zitao Li, Xuchen Pan, Weirui Kuang, Zhijian Ma",https://arxiv.org/abs/2402.14034
+AgentScope,institution,Alibaba Group; Renmin University of China,1Alibaba Group 2Renmin University of China,https://arxiv.org/pdf/2407.17789
+AgentScope,release_date,2024-02-21,Submitted on 21 Feb 2024,https://arxiv.org/abs/2402.14034v1
+AgentScope,built_on,Remote Procedure Call; Python; C++,"Communication across processes and devices utilizes Remote Procedure Call, and we provide implementations in both Python and C++.",https://arxiv.org/pdf/2407.17789
+AgentScope,execution,Distributed,we propose an actor-based distributed mechanism as the underlying technological infrastructure towards great scalability and high efficiency ... a large number of agents that might deploy across multiple devices,https://arxiv.org/pdf/2407.17789
+AgentScope,system_type,general,provide flexible environment support for simulating various real-world scenarios ... We enable user-defined functions within the environment to support flexible extension of various states,https://arxiv.org/pdf/2407.17789
+AgentScope,largest_system_size_in_original_report_or_github,1000000,"We support an agent-based simulation involving 1 million agents, which can be completed in 12 minutes using 4 devices.",https://arxiv.org/pdf/2407.17789
+AgentScope,llm_to_agent_resolution,1:1,each agent executes two LLM server calls in every game round,https://arxiv.org/pdf/2407.17789
+AgentSociety,url,https://github.com/tsinghua-fib-lab/AgentSociety,AgentSociety: LLM Agents in Society,https://raw.githubusercontent.com/tsinghua-fib-lab/AgentSociety/main/README.md
+AgentSociety,authors,"Jinghua Piao, Yuwei Yan, Jun Zhang, Nian Li, Junbo Yan, et al.","Jinghua Piao, Yuwei Yan, Jun Zhang, Nian Li, Junbo Yan",https://arxiv.org/abs/2502.08691v1
+AgentSociety,institution,Tsinghua University,"1 Department of Electronic Engineering, Beijing National Research Center for Information Science and Technology (BNRist), Tsinghua University",https://arxiv.org/pdf/2502.08691
+AgentSociety,release_date,2025-02-12,Submitted on 12 Feb 2025,https://arxiv.org/abs/2502.08691v1
+AgentSociety,built_on,"Ray, asyncio, MQTT (emqx), PostgreSQL, mlflow",we adopt the highly mature Ray framework [74] to implement distributed computing and conceal I/O latency through ... Python’s asyncio mechanism ... We select a high-performance MQTT server named emqx for this purpose. ... We choose PostgreSQL for its unique high-performance batch writing capability,https://arxiv.org/pdf/2502.08691
+AgentSociety,execution,Distributed,"The Ray framework enables managed Ray actors to work across different machines. By adding other machines to the head node during Ray cluster initialization, distributed computing can be easily achieved to horizontally scale computational resources for social simulation tasks.",https://arxiv.org/pdf/2502.08691
+AgentSociety,system_type,"society (urban, social and economic spaces)","we construct a realistic societal environment that seamlessly integrates urban, social, and economic spaces",https://arxiv.org/pdf/2502.08691
+AgentSociety,validated_on,human populations,compares the daily outflow patterns of the real data with the simulated visits over the course of the experiment,https://arxiv.org/pdf/2502.08691
+AgentSociety,largest_system_size_in_original_report_or_github,10000,"Based on the proposed simulator, we generate social lives for over 10k agents, simulating their 5 million interactions both among agents and between agents and their environment.",https://arxiv.org/pdf/2502.08691
+AgentSociety,llm_to_agent_resolution,1:1,"we first design a framework for LLM-driven social agents. These agents are endowed with human-like “minds”, which include emotions, needs, motivations, and cognition of the external world.",https://arxiv.org/pdf/2502.08691
+ABIDES,url,https://github.com/jpmorganchase/abides-jpmc-public,ABIDES (Agent Based Interactive Discrete Event Simulator) is a general purpose multi-agent discrete event simulator.,https://raw.githubusercontent.com/jpmorganchase/abides-jpmc-public/main/README.md
+ABIDES,authors,"David Byrd, Maria Hybinette, Tucker Hybinette Balch","David Byrd, Maria Hybinette, Tucker Hybinette Balch",https://arxiv.org/abs/1904.12066v1
+ABIDES,institution,Georgia Institute of Technology; University of Georgia,David Byrd School of Interactive Computing Georgia Institute of Technology ... Maria Hybinette Department of Computer Science The University of Georgia,https://arxiv.org/pdf/1904.12066
+ABIDES,release_date,2019-04-26,Submitted on 26 Apr 2019,https://arxiv.org/abs/1904.12066v1
+ABIDES,built_on,"Python, NumPy, Pandas","The ABIDES simulator is implemented using Python, currently 3.6, and the data analytical libraries NumPy [7], and Pandas [4].",https://arxiv.org/pdf/1904.12066
+ABIDES,execution,Serial,"Since our system is single-threaded, this allows the entire simulation to be guaranteed identical when the same seed is initialized within the same experimental",https://arxiv.org/pdf/1904.12066
+ABIDES,system_type,market,"ABIDES-Markets: Extension of ABIDES-Core to financial markets. Contains implementation of an exchange mimicking NASDAQ, stylised trading agents and configurations.",https://raw.githubusercontent.com/jpmorganchase/abides-jpmc-public/main/README.md
+ABIDES,validated_on,human populations,Figure 4 compares the behavior of 100 background agents interacting in ABIDES with the actual intra-day price on two separate days in history.,https://arxiv.org/pdf/1904.12066
+ABIDES,llm_to_agent_resolution,0:1,"an experiment could involve 1,000 background agents (perhaps Zero Intelligence agents or Heuristic Belief Learning agents), 100 high-frequency trading agents, and one impact agent",https://arxiv.org/pdf/1904.12066
+ABIDES,ai_safety_papers,Exploring Sentiment Manipulation by LLM-Enabled Intelligent Trading Agents,"This work utilizes a minified version of the open source ABIDES simulation, streamlined to be smaller, faster, and simpler than the original, with a greater focus on multi-agent interactive backtesting using high frequency historical data.",https://arxiv.org/pdf/2502.16343
+JAX-LOB,url,https://github.com/KangOxford/jax-lob,JAX-LOB: A GPU-Accelerated limit order book simulator to unlock large scale reinforcement learning for trading,https://raw.githubusercontent.com/KangOxford/jax-lob/jaxV3/README.md
+JAX-LOB,authors,"Sascha Frey, Kang Li, Peer Nagy, Silvia Sapora, Chris Lu, et al.","Sascha Frey, Kang Li, Peer Nagy, Silvia Sapora, Chris Lu",https://arxiv.org/abs/2308.13289v1
+JAX-LOB,institution,University of Oxford; Man Group,Stefan Zohren Man-Group Oxford-Man Institute of Quantitative Finance University of Oxford,https://arxiv.org/pdf/2308.13289
+JAX-LOB,release_date,2023-08-25,Submitted on 25 Aug 2023,https://arxiv.org/abs/2308.13289v1
+JAX-LOB,built_on,"JAX, gymnax, PureJaxRL",we present the first GPU-accelerated LOB simulator using JAX [ 9] ... wrapping the JAX-LOB simulator in a JAX-native gymnax [25] execution environment ... we integrate the environment with PureJaxRL [26],https://arxiv.org/pdf/2308.13289
+JAX-LOB,execution,Parallel,"Therefore, to achieve parallelism we process multiple books in parallel using the vmap operator.",https://arxiv.org/pdf/2308.13289
+JAX-LOB,system_type,market (limit order book),Financial exchanges across the world use limit order books (LOBs) to process orders and match trades. For research purposes it is important to have large scale efficient simulators of LOB dynamics.,https://arxiv.org/pdf/2308.13289
+JAX-LOB,llm_to_agent_resolution,0:1,use recurrent proximal policy optimization (PPO) to train an execution agent as an example application,https://arxiv.org/pdf/2308.13289
+SocioVerse,url,https://github.com/FudanDISC/SocioVerse,This is the official repository for the paper,https://raw.githubusercontent.com/FudanDISC/SocioVerse/main/README.md
+SocioVerse,authors,"Xinnong Zhang, Jiayu Lin, Xinyi Mou, Shiyue Yang, Xiawei Liu, et al.","Xinnong Zhang, Jiayu Lin, Xinyi Mou, Shiyue Yang, Xiawei Liu",https://arxiv.org/abs/2504.10157v1
+SocioVerse,institution,Shanghai Innovation Institute; Fudan University; University of Rochester; Indiana University; Xiaohongshu Inc.,"1Shanghai Innovation Insititute, 2Fudan University, 3University of Rochester, 4Indiana University, 5Xiaohongshu Inc.",https://arxiv.org/pdf/2504.10157
+SocioVerse,release_date,2025-04-14,Submitted on 14 Apr 2025,https://arxiv.org/abs/2504.10157v1
+SocioVerse,system_type,"population survey (election, news response, economic survey)","We implement three representative social simulation scenarios through the SocioVerse framework based on the implemented components: (a) presidential election prediction of America, (b) breaking news feedback analysis, and (c) national economic survey of China.",https://arxiv.org/pdf/2504.10157
+SocioVerse,validated_on,human populations,Two metrics are used to comprehensively compare the simulated election results to the real-world results.,https://arxiv.org/pdf/2504.10157
+SocioVerse,largest_system_size_in_original_report_or_github,331836,"Scenario # Agents # Demographics Type Sampling Source Language # Questions Ground truth PresElectPredict 331,836 12 label IPF X EN 49 real world",https://arxiv.org/pdf/2504.10157
+SocioVerse,llm_to_agent_resolution,1:1,"to predict the behavior of each individual. ... Through non-parametric prompting, powerful general LLMs (e.g., GPT series and Qwen series) can act in accordance with predefined user profiles.",https://arxiv.org/pdf/2504.10157
+AgentTorch,url,https://github.com/AgentTorch/AgentTorch,"AgentTorch, our open-source platform, makes building and running massive LPMs accessible.",https://raw.githubusercontent.com/AgentTorch/AgentTorch/master/readme.md
+AgentTorch,authors,"Ayush Chopra, Shashank Kumar, Nurullah Giray-Kuru, Ramesh Raskar, Arnau Quera-Bofarull","Ayush Chopra, Shashank Kumar, Nurullah Giray-Kuru, Ramesh Raskar, Arnau Quera-Bofarull",https://arxiv.org/abs/2409.10568v1
+AgentTorch,institution,Massachusetts Institute of Technology; University of Oxford,"Ramesh Raskar Massachusetts Institute of Technology Cambridge, MA, USA Arnau Quera-bofarull University of Oxford",https://arxiv.org/pdf/2409.10568
+AgentTorch,release_date,2024-09-14,Submitted on 14 Sep 2024,https://arxiv.org/abs/2409.10568v1
+AgentTorch,execution,Parallel,AgentTorch supports distributed simulation across multiple GPUs with **minimal code changes**.,https://raw.githubusercontent.com/AgentTorch/AgentTorch/master/docs/tutorials/distributed-simulation/index.md
+AgentTorch,system_type,"population (epidemiology, labor market)","The epidemiological model forecast cases, while the economic model forecast unemployment rates.",https://arxiv.org/pdf/2409.10568
+AgentTorch,validated_on,human populations,compute correlation of this time series with observed data from the US Bureau of Labor Statistics,https://arxiv.org/pdf/2409.10568
+AgentTorch,largest_system_size_in_original_report_or_github,8400000,"We demonstrate the real-world applicability of our approach through a case study of the COVID-19 pandemic, simulating 8.4 million agents representing New York City",https://arxiv.org/pdf/2409.10568
+AgentTorch,llm_to_agent_resolution,<1:1,"Our key insight is that by querying LLMs for representative agent types rather than individual agents, we can achieve a balance between behavioral complexity and computational efficiency.",https://arxiv.org/pdf/2409.10568
+System level safety evaluations,url,https://equilibria1.substack.com/p/system-level-safety-evaluations,System Level Safety Evaluations,https://equilibria1.substack.com/p/system-level-safety-evaluations
+System level safety evaluations,authors,"markov, Jonas Hallgren",citation_author ... markov ... citation_author ... Jonas Hallgren,https://www.lesswrong.com/posts/AJo2HFT8TdY2B3wNJ/system-level-safety-evaluations
+System level safety evaluations,institution,Equilibria Network,Equilibria,https://equilibria1.substack.com/p/system-level-safety-evaluations
+System level safety evaluations,release_date,2025-09-29,"Sep 29, 2025",https://equilibria1.substack.com/p/system-level-safety-evaluations
+System level safety evaluations,system_type,common pool resource game,investing shared resources over multiple rounds,https://equilibria1.substack.com/p/system-level-safety-evaluations
+System level safety evaluations,largest_system_size_in_original_report_or_github,10,We specifically tested 10 agents over 30 rounds.,https://equilibria1.substack.com/p/system-level-safety-evaluations
+System level safety evaluations,llm_to_agent_resolution,1:1,we can use AI-agents (simulated using LLMs for now) to create toy models of real systems,https://equilibria1.substack.com/p/system-level-safety-evaluations
+Light Society,url,https://arxiv.org/abs/2506.12078,Modeling Earth-Scale Human-Like Societies with One Billion Agents,https://arxiv.org/abs/2506.12078
+Light Society,authors,"Haoxiang Guan, Jiyan He, Liyang Fan, Zhenzhen Ren, Shaobin He, et al.","Authors: Haoxiang Guan , Jiyan He , Liyang Fan , Zhenzhen Ren , Shaobin He",https://arxiv.org/abs/2506.12078
+Light Society,release_date,2025-06-07,Submitted on 7 Jun 2025,https://arxiv.org/abs/2506.12078
+Light Society,system_type,society,modeling diverse social phenomena,https://arxiv.org/abs/2506.12078
+Light Society,validated_on,human populations,within the 40%–50% range commonly reported in human experiments,https://arxiv.org/abs/2506.12078
+Light Society,largest_system_size_in_original_report_or_github,1000000000,simulations of Trust Games and opinion diffusion at up to one billion agents,https://arxiv.org/abs/2506.12078
+Light Society,llm_to_agent_resolution,0:1,each interaction reduces to a single array lookup,https://arxiv.org/abs/2506.12078
